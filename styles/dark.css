@@ -11,7 +11,6 @@
   --color-hover: #ff007066;
   --priming-color: #ff0070;
   --priming-text-color: #000028;
-  background-image: url(/images/cover-image-dark.png);
 }
 .page.theme_dark .decorative__el {
   position: absolute;

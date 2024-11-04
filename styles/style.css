@@ -2,21 +2,12 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  font-family: "IBM Plex Mono", monospace, Arial;
   background-attachment: fixed;
   background-color: var(--bg-color);
-  background-image: cover;
+  background-size: cover;
   background-position: center;
-}
-
-:root {
-  --head-foot-color: #db00ff;
-  --accent-color: #ff0070;
-  --p-color: #f1b2ce;
-  --bg-color: #000028;
-  --color-hover: #ff007066;
-  --priming-color: #ff0070;
-  --priming-text-color: #000028;
+  background-image: url(/images/cover-image-dark.png);
 }
 
 .header {
@@ -26,19 +17,6 @@
   grid-template-rows: 1fr min-content 1fr;
   height: 100vh;
   min-height: 668px;
-}
-
-.theme_dark .decorative__el::after {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0px 0px 4px 2px;
-  top: 9px;
-  right: -17px;
 }
 
 .decorated-zone::before {
@@ -98,6 +76,7 @@
 }
 
 .header__theme-menu-button:focus {
+  outline: none;
   border-bottom: 1px solid var(--accent-color);
 }
 
@@ -154,7 +133,7 @@
   }
 }
 
-.cards__articles {
+.cards {
   font-size: 18px;
   font-weight: 700;
   line-height: 130%;
@@ -183,7 +162,7 @@
   row-gap: 10px;
 }
 
-.header__p {
+.accent__text {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
@@ -229,7 +208,7 @@
     grid-column: 2/3;
     grid-template-rows: repeat(auto-fill, min-content);
   }
-  .block__advice > .header__p {
+  .block__advice > .accent__text {
     grid-template-rows: repeat(auto-fill, min-content);
   }
   .block__advice > .header__article {
@@ -249,21 +228,21 @@
 @media (width>=1024px) {
   .block__subjects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: max-content, min-content;
-    column-gap: 20px;
+    grid-template-columns: repeat(3, calc((100% - 40px) / 3));
+    gap: 20px;
   }
   .block__subjects > .header__article {
     display: grid;
-    grid-column: 1/2;
+    grid-column: 1/4;
     grid-row: 1/2;
-  }
-  .block__subjects > .article-item {
-    grid-row: 2/3;
+    max-width: calc((100% - 40px) / 3);
   }
 }
 
 .block__img {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   display: grid;
   row-gap: 10px;
 }
@@ -323,6 +302,7 @@
   height: 100vh;
   display: grid;
   place-content: center center;
+  min-height: 668px;
 }
 
 .footer__head {
