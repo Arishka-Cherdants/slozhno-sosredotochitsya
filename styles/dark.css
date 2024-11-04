@@ -3,10 +3,88 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+.theme_dark {
+  --head-foot-color: #db00ff;
+  --accent-color: #ff0070;
+  --p-color: #f1b2ce;
+  --bg-color: #000028;
+  --color-hover: #ff007066;
+  --priming-color: #ff0070;
+  --priming-text-color: #000028;
+  background-image: url(/images/cover-image-dark.png);
+}
+.page.theme_dark .decorative__el {
+  position: absolute;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 139%;
+  color: var(--accent-color);
+  top: clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
+  right: clamp(2.375rem, 2.545vw + 1.779rem, 3rem);
+  visibility: visible;
+}
+
+.page.theme_dark .decorative__el::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px;
+  top: 9px;
+  right: -17px;
+  visibility: visible;
+}
 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --head-foot-color: #db00ff;
+  --accent-color: #ff0070;
+  --p-color: #f1b2ce;
+  --bg-color: #000028;
+  --color-hover: #ff007066;
+  --priming-color: #ff0070;
+  --priming-text-color: #000028;
+  background-image: url(/images/cover-image-dark.png);
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    background-image: url(/images/cover-image-dark.png);
+    --head-foot-color: #db00ff;
+    --accent-color: #ff0070;
+    --p-color: #f1b2ce;
+    --bg-color: #000028;
+    --color-hover: #ff007066;
+    --priming-color: #ff0070;
+    --priming-text-color: #000028;
+  }
+  .decorative__el {
+    position: absolute;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 139%;
+    color: var(--accent-color);
+    top: clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
+    right: clamp(2.375rem, 2.545vw + 1.779rem, 3rem);
+  }
+  .decorative__el::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0px 0px 4px 2px;
+    top: 9px;
+    right: -17px;
+  }
 }
