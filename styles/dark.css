@@ -16,6 +16,7 @@
   --priming-color: #ff0070;
   --priming-text-color: #000028;
   --condition: visible;
+  --shadow-color: #ff0070;
   --bg-image: url(../images/cover-image-dark.png);
 }
 
@@ -29,6 +30,7 @@
     --priming-color: #ff0070;
     --priming-text-color: #000028;
     --condition: visible;
+    --shadow-color: #ff0070;
     --bg-image: url(../images/cover-image-dark.png);
   }
 }

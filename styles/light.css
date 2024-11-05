@@ -17,6 +17,7 @@
   --priming-color: #ff8dcb;
   --priming-text-color: #353430;
   --condition: hidden;
+  --shadow-color: #ff0070;
   --bg-image: url(../images/cover-image-light.png);
 }
 
@@ -30,24 +31,19 @@
     --priming-color: #ff8dcb;
     --priming-text-color: #353430;
     --condition: hidden;
+    --shadow-color: #ff0070;
     --bg-image: url(../images/cover-image-light.png);
   }
 }
 
 @media (width<1024px) {
-  .header__head {
-    text-shadow: 4px 4px var(--priming-color);
-  }
-  .footer__head {
-    text-shadow: 2px 2px var(--priming-color);
+  .page.theme_light {
+    --shadow-color: #ff8dcb;
   }
 }
 
 @media (prefers-color-scheme: light) and (width<1024px) {
-  .header__head {
-    text-shadow: 4px 4px var(--priming-color);
-  }
-  .footer__head {
-    text-shadow: 2px 2px var(--priming-color);
+  .page.theme_light {
+    --shadow-color: #ff8dcb;
   }
 }
