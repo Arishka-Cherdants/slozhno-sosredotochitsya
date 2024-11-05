@@ -16,12 +16,8 @@
   --color-hover: #32312d66;
   --priming-color: #ff8dcb;
   --priming-text-color: #353430;
-  background-image: url(/images/cover-image-light.png);
-}
-
-.page.theme_light .decorative__el {
-  visibility: hidden;
-  position: absolute;
+  --condition: hidden;
+  --bg-image: url(../images/cover-image-light.png);
 }
 
 @media (prefers-color-scheme: light) {
@@ -33,11 +29,17 @@
     --color-hover: #32312d66;
     --priming-color: #ff8dcb;
     --priming-text-color: #353430;
-    background-image: url(/images/cover-image-light.png);
+    --condition: hidden;
+    --bg-image: url(../images/cover-image-light.png);
   }
-  .decorative__el {
-    visibility: hidden;
-    position: absolute;
+}
+
+@media (width<1024px) {
+  .header__head {
+    text-shadow: 4px 4px var(--priming-color);
+  }
+  .footer__head {
+    text-shadow: 2px 2px var(--priming-color);
   }
 }
 

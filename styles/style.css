@@ -7,7 +7,7 @@
   background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
-  background-image: url(/images/cover-image-dark.png);
+  background-image: var(--bg-image);
 }
 
 .header {
@@ -17,6 +17,31 @@
   grid-template-rows: 1fr min-content 1fr;
   height: 100vh;
   min-height: 668px;
+}
+
+.decorative__el {
+  position: absolute;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 139%;
+  color: var(--accent-color);
+  top: clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
+  right: clamp(2.375rem, 2.545vw + 1.779rem, 3rem);
+  visibility: var(--condition);
+}
+.decorative__el::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px;
+  top: 9px;
+  right: -17px;
+  visibility: var(--condition);
 }
 
 .decorated-zone::before {
@@ -170,7 +195,7 @@
   background-color: var(--priming-color);
 }
 
-.p__text {
+.text {
   font-size: inherit;
   line-height: inherit;
   font-weight: 400;
